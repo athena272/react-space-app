@@ -1,6 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
+@font-face {
+  font-family: ;
+  src: url();
+}
 
 html {
   line-height: 1.15; 
