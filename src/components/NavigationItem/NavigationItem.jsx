@@ -8,10 +8,9 @@ NavigationItem.propTypes = {
     isActive: PropTypes.bool,
 }
 
-
 export default function NavigationItem({ children, activeIcon, inactiveIcon, isActive = false }) {
     return (
-        <NavigationItemStyles>
+        <NavigationItemStyles $isActive={isActive}>
             <img src={isActive ? activeIcon : inactiveIcon} alt="" />
             {children}
         </NavigationItemStyles >
