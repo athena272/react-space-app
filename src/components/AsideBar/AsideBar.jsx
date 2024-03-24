@@ -12,8 +12,6 @@ import newsInactive from '/assets/icons/novas-inativo.png'
 import supriseMeActive from '/assets/icons/surpreenda-me-ativo.png'
 import supriseMeInactive from '/assets/icons/surpreenda-me-inativo.png'
 
-
-
 const arrayIcons = [
     {
         active: homeActive,
