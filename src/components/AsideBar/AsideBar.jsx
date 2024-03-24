@@ -1,14 +1,21 @@
+import ListStyles from "./AsideBarStyles"
+
 export default function AsideBar() {
     return (
         <aside>
             <nav>
-                <ul>
+                <ListStyles>
                     <li>
                         <a href="">
                             Início
                         </a>
                     </li>
-                </ul>
+                    <li>
+                        <a href="">
+                            Mais curtidos
+                        </a>
+                    </li>
+                </ListStyles>
             </nav>
         </aside>
     )
