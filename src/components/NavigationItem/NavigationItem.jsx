@@ -10,7 +10,6 @@ NavigationItem.propTypes = {
 
 export default function NavigationItem({ children, activeIcon, inactiveIcon, isActive = false }) {
     if (children === 'Início') {
-        console.log("🚀 ~ NavigationItem ~ children:", children)
         isActive = true
     }
 
