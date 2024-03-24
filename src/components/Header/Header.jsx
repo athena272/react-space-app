@@ -3,7 +3,7 @@ import HeaderStyles from './HeaderStyles'
 export default function Header() {
     return (
         <HeaderStyles>
-            <img src="/images/logo.png" alt="" />
+            <img src="assets/images/logo.png" alt="" />
         </HeaderStyles>
     )
 }
