@@ -53,9 +53,9 @@ export default function AsideBar() {
                                 key={index}
                                 activeIcon={icon.active}
                                 inactiveIcon={icon.inactive}
-                                isActive={false}
+                            // isActive={false}
                             >
-                                icon.text
+                                {icon.text}
                             </NavigationItem>
                         ))
                     }
