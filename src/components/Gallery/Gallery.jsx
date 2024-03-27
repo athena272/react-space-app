@@ -1,11 +1,19 @@
-import Title from './GalleryStyles'
+import Popular from '../Popular/Popular'
+import Tags from '../Tags/Tags'
+import { Title, GalleryContainer, FluidSection } from './GalleryStyles'
 
 export default function Gallery() {
     return (
         <>
-            <Title>
-                Navegue pela galeria
-            </Title>
+            <Tags />
+            <GalleryContainer>
+                <FluidSection>
+                    <Title>
+                        Navegue pela galeria
+                    </Title>
+                </FluidSection>
+                <Popular />
+            </GalleryContainer>
         </>
     )
 }
