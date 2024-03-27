@@ -4,10 +4,13 @@ import { Figure, Footer, IconButton } from "./ImageStyles"
 Image.propTypes = {
     photo: PropTypes.object,
     onRequestZoom: PropTypes.func,
+    onToggleFavorite: PropTypes.func,
     expanded: PropTypes.bool,
 }
 
-export default function Image({ photo, onRequestZoom, expanded = false }) {
+export default function Image({ photo, onRequestZoom, onToggleFavorite, expanded = false }) {
+    const favoriteIcon = photo.favorited ? '/assets/icons/favorito-ativo.png' : '/assets/icons/favorito.png'
+
     return (
         <Figure
             $expanded={expanded}
@@ -18,8 +21,10 @@ export default function Image({ photo, onRequestZoom, expanded = false }) {
                 <h3>{photo.title}</h3>
                 <Footer>
                     <h4>{photo.source}</h4>
-                    <IconButton>
-                        <img src="/assets/icons/favorito.png" alt="Icone favoritar" />
+                    <IconButton
+                        onClick={() => onToggleFavorite(photo)}
+                    >
+                        <img src={favoriteIcon} alt="Icone favoritar" />
                     </IconButton>
                     {
                         !expanded &&
