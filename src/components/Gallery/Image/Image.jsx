@@ -25,7 +25,7 @@ export default function Image({ photo, onRequestZoom, expanded = false }) {
                         !expanded &&
                         <IconButton
                             aria-hidden={expanded}
-                            onClick={() => onRequestZoom}
+                            onClick={() => onRequestZoom(photo)}
                         >
                             <img src="/assets/icons/expandir.png" alt="Icone favoritar" />
                         </IconButton>
