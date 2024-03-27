@@ -11,7 +11,7 @@ import { useState } from "react"
 
 export default function App() {
   const [galleryPhotps, setGalleryPhotos] = useState(photos)
-  const [selecedtPhoto, setSelecedtPhoto] = useState({})
+  const [selecedtPhoto, setSelecedtPhoto] = useState(null)
 
   return (
     <BackgroundGradient>
@@ -32,7 +32,10 @@ export default function App() {
           </GalleryContent>
         </MainContainer>
       </AppContainer>
-      <ModalZoom photo={selecedtPhoto} />
+      <ModalZoom
+        photo={selecedtPhoto}
+        onClose={() => setSelecedtPhoto(null)}
+      />
     </BackgroundGradient>
   )
 }
