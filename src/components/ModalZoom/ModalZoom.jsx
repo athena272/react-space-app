@@ -5,10 +5,11 @@ import Image from "../Gallery/Image/Image"
 
 ModalZoom.propTypes = {
     photo: PropTypes.object,
-    onClose: PropTypes.func
+    onClose: PropTypes.func,
+    onToggleFavorite: PropTypes.func,
 }
 
-export default function ModalZoom({ photo, onClose }) {
+export default function ModalZoom({ photo, onClose, onToggleFavorite }) {
     return (
         <>
             {
