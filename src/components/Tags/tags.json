@@ -1,22 +1,22 @@
 [
     {
         "id": 0,
-        "titulo": "Todas"
+        "title": "Todas"
     },
     {
         "id": 1,
-        "titulo": "Estrelas"
+        "title": "Estrelas"
     },
     {
         "id": 2,
-        "titulo": "Galáxias"
+        "title": "Galáxias"
     },
     {
         "id": 3,
-        "titulo": "Luas"
+        "title": "Luas"
     },
     {
         "id": 4,
-        "titulo": "Nebulosas"
+        "title": "Nebulosas"
     }
 ]
