@@ -21,3 +21,4 @@ export const ImagesContainer = styled.section`
     flex-wrap: wrap;
     gap: 24px;
 `
+
