@@ -1,14 +1,15 @@
 import Popular from '../Popular/Popular'
 import Tags from '../Tags/Tags'
 import Image from '../Image/Image'
-import { Title, GalleryContainer, FluidSection } from './GalleryStyles'
+import { Title, GalleryContainer, FluidSection, ImagesContainer } from './GalleryStyles'
 import PropTypes from "prop-types"
 
 Gallery.propTypes = {
     photos: PropTypes.array,
+    onSelectPhoto: PropTypes.func
 }
 
-export default function Gallery({ photos }) {
+export default function Gallery({ photos, onSelectPhoto }) {
 
     return (
         <>
@@ -18,17 +19,18 @@ export default function Gallery({ photos }) {
                     <Title>
                         Navegue pela galeria
                     </Title>
-                    <ul>
+                    <ImagesContainer>
                         {
                             photos.map((photo, index) => (
                                 <Image
                                     key={index}
                                     photo={photo}
+                                    onRequestZoom={onSelectPhoto}
                                 >
                                 </Image>
                             ))
                         }
-                    </ul>
+                    </ImagesContainer>
                 </FluidSection>
                 <Popular />
             </GalleryContainer>

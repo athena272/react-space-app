@@ -1,4 +1,4 @@
-import { Title } from "../Gallery/GalleryStyles";
+import { Title } from "../GalleryStyles";
 
 export default function Popular() {
     return (

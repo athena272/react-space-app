@@ -5,11 +5,13 @@ import AsideBar from "./components/AsideBar/AsideBar"
 import Banner from "./components/Banner/Banner"
 import bannerBackgroundImage from '/assets/images/banner.png'
 import Gallery from "./components/Gallery/Gallery"
+import ModalZoom from "./components/ModalZoom/ModalZoom"
 import photos from './fotos.json'
 import { useState } from "react"
 
 export default function App() {
   const [galleryPhotps, setGalleryPhotos] = useState(photos)
+  const [selecedtPhoto, setSelecedtPhoto] = useState({})
 
   return (
     <BackgroundGradient>
@@ -23,10 +25,14 @@ export default function App() {
               text={"A galeria mais completa de fotos do espaço!"}
               backgroundImage={bannerBackgroundImage}
             />
-            <Gallery photos={galleryPhotps} />
+            <Gallery
+              photos={galleryPhotps}
+              onSelectPhoto={photo => setSelecedtPhoto(photo)}
+            />
           </GalleryContent>
         </MainContainer>
       </AppContainer>
+      <ModalZoom photo={selecedtPhoto} />
     </BackgroundGradient>
   )
 }

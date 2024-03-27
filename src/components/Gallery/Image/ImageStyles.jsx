@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const Figure = styled.figure`
-    width: ${(props) => (props.$expandida ? '90%' : '460px')};
+export const Figure = styled.figure`
+    width: ${(props) => (props.$expanded ? '90%' : '460px')};
     max-width: 100%;
     margin: 0;
     display: flex;
@@ -34,5 +34,8 @@ const Figure = styled.figure`
         }
     }
 `
-
-export default Figure
+export const Footer = styled.footer`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
