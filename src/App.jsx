@@ -10,8 +10,20 @@ import photos from './fotos.json'
 import { useState } from "react"
 
 export default function App() {
-  const [galleryPhotps, setGalleryPhotos] = useState(photos)
+  const [galleryPhotos, setGalleryPhotos] = useState(photos)
   const [selecedtPhoto, setSelecedtPhoto] = useState(null)
+
+  const onToggleFavorite = (photo) => {
+    console.log("🚀 ~ onToggleFavorite ~ photo:", photo)
+
+    setGalleryPhotos(galleryPhotos.map(galleryPhoto => {
+      return {
+        ...galleryPhoto,
+        favorited: galleryPhoto.id === photo.id ? !photo.favorited : photo.favorited
+      }
+    }))
+
+  }
 
   return (
     <BackgroundGradient>
@@ -26,8 +38,9 @@ export default function App() {
               backgroundImage={bannerBackgroundImage}
             />
             <Gallery
-              photos={galleryPhotps}
+              photos={galleryPhotos}
               onSelectPhoto={photo => setSelecedtPhoto(photo)}
+              onToggleFavorite={onToggleFavorite}
             />
           </GalleryContent>
         </MainContainer>
@@ -35,6 +48,7 @@ export default function App() {
       <ModalZoom
         photo={selecedtPhoto}
         onClose={() => setSelecedtPhoto(null)}
+        onToggleFavorite={onToggleFavorite}
       />
     </BackgroundGradient>
   )
