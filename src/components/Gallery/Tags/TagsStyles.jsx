@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const TagsContainer = styled.section`
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin-top: 56px;
+`
+
 export const TitleTag = styled.h3`
     color: #D9D9D9;
     font-size: 24px;
@@ -20,4 +27,10 @@ export const Tag = styled.button`
     &:hover {
         border-color: #C98CF1;
     }
+`
+
+export const Div = styled.div`
+    display: flex;
+    gap: 24px;
+    justify-content: end;
 `
