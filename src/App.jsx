@@ -5,8 +5,12 @@ import AsideBar from "./components/AsideBar/AsideBar"
 import Banner from "./components/Banner/Banner"
 import bannerBackgroundImage from '/assets/images/banner.png'
 import Gallery from "./components/Gallery/Gallery"
+import photos from './fotos.json'
+import { useState } from "react"
 
 export default function App() {
+  const [galleryPhotps, setGalleryPhotos] = useState(photos)
+
   return (
     <BackgroundGradient>
       <GlobalStyles />
@@ -19,7 +23,7 @@ export default function App() {
               text={"A galeria mais completa de fotos do espaço!"}
               backgroundImage={bannerBackgroundImage}
             />
-            <Gallery />
+            <Gallery photos={galleryPhotps} />
           </GalleryContent>
         </MainContainer>
       </AppContainer>
