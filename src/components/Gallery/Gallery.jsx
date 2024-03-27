@@ -8,9 +8,7 @@ Gallery.propTypes = {
 }
 
 export default function Gallery({ photos }) {
-    console.log("🚀 ~ Gallery ~ photos:", photos)
     
-
     return (
         <>
             <Tags />
