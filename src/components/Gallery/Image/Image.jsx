@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import { Figure, Footer } from "./ImageStyles"
+import { Figure, Footer, IconButton } from "./ImageStyles"
 
 Image.propTypes = {
     photo: PropTypes.object,
@@ -18,9 +18,18 @@ export default function Image({ photo, onRequestZoom, expanded = false }) {
                 <h3>{photo.title}</h3>
                 <Footer>
                     <h4>{photo.source}</h4>
-                    
-                    <button>Favorito</button>
-                    <button>Expandir</button>
+                    <IconButton>
+                        <img src="/assets/icons/favorito.png" alt="Icone favoritar" />
+                    </IconButton>
+                    {
+                        !expanded &&
+                        <IconButton
+                            aria-hidden={expanded}
+                            onClick={() => onRequestZoom}
+                        >
+                            <img src="/assets/icons/expandir.png" alt="Icone favoritar" />
+                        </IconButton>
+                    }
                 </Footer>
             </figcaption>
         </Figure>
