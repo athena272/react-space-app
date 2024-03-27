@@ -6,10 +6,11 @@ import PropTypes from "prop-types"
 
 Gallery.propTypes = {
     photos: PropTypes.array,
-    onSelectPhoto: PropTypes.func
+    onSelectPhoto: PropTypes.func,
+    onToggleFavorite: PropTypes.func,
 }
 
-export default function Gallery({ photos, onSelectPhoto }) {
+export default function Gallery({ photos, onSelectPhoto, onToggleFavorite }) {
 
     return (
         <>
@@ -26,6 +27,7 @@ export default function Gallery({ photos, onSelectPhoto }) {
                                     key={index}
                                     photo={photo}
                                     onRequestZoom={onSelectPhoto}
+                                    onToggleFavorite={onToggleFavorite}
                                 >
                                 </Image>
                             ))
