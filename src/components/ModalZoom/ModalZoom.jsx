@@ -20,7 +20,11 @@ export default function ModalZoom({ photo, onClose, onToggleFavorite }) {
                         open={!!photo}
                         onClose={onClose}
                     >
-                        <Image photo={photo} expanded={true} />
+                        <Image
+                            photo={photo}
+                            expanded={true}
+                            onToggleFavorite={onToggleFavorite}
+                        />
                         <form method="dialog">
                             <IconButton formMethod="dialog">
                                 <img src="/assets/icons/fechar.png" alt="Icone de fechar" />
