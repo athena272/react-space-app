@@ -14,8 +14,6 @@ export default function App() {
   const [selecedtPhoto, setSelecedtPhoto] = useState(null)
 
   const onToggleFavorite = (photo) => {
-    console.log("🚀 ~ onToggleFavorite ~ photo:", photo)
-    console.log("🚀 ~ selecedtPhoto ~ selecedtPhoto:", selecedtPhoto)
 
     if (photo.id === selecedtPhoto?.id) {
       setSelecedtPhoto({
@@ -30,25 +28,6 @@ export default function App() {
       }
     }))
   }
-
-  //POR QUE ESSA DA ERRADO?
-  // const onToggleFavorite = (photo) => {
-  //   console.log("🚀 ~ onToggleFavorite ~ photo:", photo)
-  //   console.log("🚀 ~ selecedtPhoto ~ selecedtPhoto:", selecedtPhoto)
-
-  //   if (photo.id === selecedtPhoto?.id) {
-  //     setSelecedtPhoto({
-  //       ...selecedtPhoto,
-  //       favorited: !selecedtPhoto.favorited,
-  //     })
-  //   }
-  //   setGalleryPhotos(galleryPhotos.map(galleryPhoto => {
-  //     return {
-  //       ...galleryPhoto,
-  //       favorited: galleryPhoto.id === photo.id ? !photo.favorited : photo.favorited
-  //     }
-  //   }))
-  // }
 
   return (
     <BackgroundGradient>
