@@ -15,15 +15,40 @@ export default function App() {
 
   const onToggleFavorite = (photo) => {
     console.log("🚀 ~ onToggleFavorite ~ photo:", photo)
+    console.log("🚀 ~ selecedtPhoto ~ selecedtPhoto:", selecedtPhoto)
 
+    if (photo.id === selecedtPhoto?.id) {
+      setSelecedtPhoto({
+        ...selecedtPhoto,
+        favorited: !selecedtPhoto.favorited
+      })
+    }
     setGalleryPhotos(galleryPhotos.map(galleryPhoto => {
       return {
         ...galleryPhoto,
-        favorited: galleryPhoto.id === photo.id ? !photo.favorited : photo.favorited
+        favorited: galleryPhoto.id === photo.id ? !photo.favorited : galleryPhoto.favorited
       }
     }))
-
   }
+
+  //POR QUE ESSA DA ERRADO?
+  // const onToggleFavorite = (photo) => {
+  //   console.log("🚀 ~ onToggleFavorite ~ photo:", photo)
+  //   console.log("🚀 ~ selecedtPhoto ~ selecedtPhoto:", selecedtPhoto)
+
+  //   if (photo.id === selecedtPhoto?.id) {
+  //     setSelecedtPhoto({
+  //       ...selecedtPhoto,
+  //       favorited: !selecedtPhoto.favorited,
+  //     })
+  //   }
+  //   setGalleryPhotos(galleryPhotos.map(galleryPhoto => {
+  //     return {
+  //       ...galleryPhoto,
+  //       favorited: galleryPhoto.id === photo.id ? !photo.favorited : photo.favorited
+  //     }
+  //   }))
+  // }
 
   return (
     <BackgroundGradient>
