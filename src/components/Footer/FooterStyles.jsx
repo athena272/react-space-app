@@ -9,4 +9,21 @@ const FooterContainer = styled.footer`
     background-color: #04244F;
     padding: 22px;
     box-sizing: border-box;
-`;
+`
+
+const IconsContainer = styled.ul`
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+        margin-right: 32px;
+    }
+`
+
+const FooterText = styled.p`
+    font-size: 16px;
+    color: white;
+    margin: 0;
+`
