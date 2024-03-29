@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const FooterContainer = styled.footer`
+export const FooterContainer = styled.footer`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,7 +11,7 @@ const FooterContainer = styled.footer`
     box-sizing: border-box;
 `
 
-const IconsContainer = styled.ul`
+export const IconsContainer = styled.ul`
     margin: 0;
     padding: 0;
     list-style: none;
@@ -22,7 +22,7 @@ const IconsContainer = styled.ul`
     }
 `
 
-const FooterText = styled.p`
+export const FooterText = styled.p`
     font-size: 16px;
     color: white;
     margin: 0;
