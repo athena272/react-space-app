@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import { Figure, Footer, IconButton } from "./ImageStyles"
+import { Figure, Footer, IconButton, TagContainer } from "./ImageStyles"
 
 Image.propTypes = {
     photo: PropTypes.object,
@@ -19,6 +19,7 @@ export default function Image({ photo, onRequestZoom, onToggleFavorite, expanded
             <img src={photo.path} alt={photo.title} />
             <figcaption>
                 <h3>{photo.title}</h3>
+                <TagContainer>{photo.tagName}</TagContainer>
                 <Footer>
                     <h4>{photo.source}</h4>
                     <IconButton
