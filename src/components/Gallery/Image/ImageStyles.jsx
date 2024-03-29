@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Figure = styled.figure`
+    position: relative;
     width: ${(props) => (props.$expanded ? '90%' : '460px')};
     max-width: 100%;
     margin: 0;
@@ -9,6 +10,7 @@ export const Figure = styled.figure`
 
     & > img {
         max-width: 100%;
+        height: 100%;
         border-radius: 20px 20px 0 0;
     }
 
@@ -48,4 +50,17 @@ export const IconButton = styled.button`
     background-color: transparent;
     border: none;
     cursor: pointer;
+`
+
+export const TagContainer = styled.span`
+    min-width: 90px;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    background-color: #0000008c;
+    padding: 10px 0;
+    border: 1px solid ;
+    border-radius: 8px;
 `
