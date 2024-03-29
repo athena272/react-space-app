@@ -59,7 +59,7 @@ export const TagContainer = styled.span`
     top: 20px;
     right: 30px;
     color: #fff;
-    background-color: #0000008c;
+    background-color: #000000bb;
     padding: 10px 0;
     border: 1px solid ;
     border-radius: 8px;
