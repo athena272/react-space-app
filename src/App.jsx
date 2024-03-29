@@ -46,7 +46,6 @@ export default function App() {
       <GlobalStyles />
       <AppContainer>
         <Header
-          filter={filter}
           setFilter={setFilter}
         />
         <MainContainer>
