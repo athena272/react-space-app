@@ -14,7 +14,6 @@ export default function App() {
   const [filter, setFilter] = useState('')
   const [tag, setTag] = useState(0)
   const [photoWithZoom, setPhotoWithZoom] = useState(null)
-  const [selecedtPhoto, setSelecedtPhoto] = useState(null)
 
   useEffect(() => {
     const filteredPhotos = photos.filter(photo => {
@@ -28,10 +27,10 @@ export default function App() {
 
   const onToggleFavorite = (photo) => {
 
-    if (photo.id === selecedtPhoto?.id) {
-      setSelecedtPhoto({
-        ...selecedtPhoto,
-        favorited: !selecedtPhoto.favorited
+    if (photo.id === photoWithZoom?.id) {
+      setPhotoWithZoom({
+        ...photoWithZoom,
+        favorited: !photoWithZoom.favorited
       })
     }
     setGalleryPhotos(galleryPhotos.map(galleryPhoto => {
@@ -56,15 +55,15 @@ export default function App() {
             />
             <Gallery
               photos={galleryPhotos}
-              onSelectPhoto={photo => setSelecedtPhoto(photo)}
+              onSelectPhoto={photo => setPhotoWithZoom(photo)}
               onToggleFavorite={onToggleFavorite}
             />
           </GalleryContent>
         </MainContainer>
       </AppContainer>
       <ModalZoom
-        photo={selecedtPhoto}
-        onClose={() => setSelecedtPhoto(null)}
+        photo={photoWithZoom}
+        onClose={() => setPhotoWithZoom(null)}
         onToggleFavorite={onToggleFavorite}
       />
     </BackgroundGradient>
