@@ -45,7 +45,10 @@ export default function App() {
     <BackgroundGradient>
       <GlobalStyles />
       <AppContainer>
-        <Header />
+        <Header
+          filter={filter}
+          setFilter={setFilter}
+        />
         <MainContainer>
           <AsideBar />
           <GalleryContent>
@@ -57,6 +60,7 @@ export default function App() {
               photos={galleryPhotos}
               onSelectPhoto={photo => setPhotoWithZoom(photo)}
               onToggleFavorite={onToggleFavorite}
+              setTag={setTag}
             />
           </GalleryContent>
         </MainContainer>
