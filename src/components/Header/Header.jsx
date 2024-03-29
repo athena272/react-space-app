@@ -3,15 +3,14 @@ import HeaderStyles from './HeaderStyles'
 import TextField from '../TextField/TextField'
 
 Header.propTypes = {
-    filter: PropTypes.string,
     setFilter: PropTypes.func,
 }
 
-export default function Header({ filter, setFilter }) {
+export default function Header({ setFilter }) {
     return (
         <HeaderStyles>
             <img src="assets/images/logo.png" alt="" />
-            <TextField />
+            <TextField setFilter={setFilter} />
         </HeaderStyles>
     )
 }
