@@ -7,7 +7,7 @@ import bannerBackgroundImage from '/assets/images/banner.png'
 import Gallery from "./components/Gallery/Gallery"
 import ModalZoom from "./components/ModalZoom/ModalZoom"
 import photos from './fotos.json'
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function App() {
   const [galleryPhotos, setGalleryPhotos] = useState(photos)
