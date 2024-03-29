@@ -11,7 +11,20 @@ import { useState, useEffect } from "react"
 
 export default function App() {
   const [galleryPhotos, setGalleryPhotos] = useState(photos)
+  const [filter, setFilter] = useState('')
+  const [tag, setTag] = useState(0)
+  const [photoWithZoom, setPhotoWithZoom] = useState(null)
   const [selecedtPhoto, setSelecedtPhoto] = useState(null)
+
+  useEffect(() => {
+    const filteredPhotos = photos.filter(photo => {
+      const filterByTag = !tag || photo.tagId === tag
+      const filterByTitle = !filter || photo.title.toLowerCase().includes(filter.toLowerCase())
+      return filterByTag && filterByTitle
+    })
+
+    setGalleryPhotos(filteredPhotos)
+  }, [filter, tag])
 
   const onToggleFavorite = (photo) => {
 
