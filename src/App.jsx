@@ -6,6 +6,7 @@ import Banner from "./components/Banner/Banner"
 import bannerBackgroundImage from '/assets/images/banner.png'
 import Gallery from "./components/Gallery/Gallery"
 import ModalZoom from "./components/ModalZoom/ModalZoom"
+import Footer from "./components/Footer/Footer"
 import photos from './fotos.json'
 import { useState, useEffect } from "react"
 
@@ -69,6 +70,7 @@ export default function App() {
         onClose={() => setPhotoWithZoom(null)}
         onToggleFavorite={onToggleFavorite}
       />
+      <Footer />
     </BackgroundGradient>
   )
 }
