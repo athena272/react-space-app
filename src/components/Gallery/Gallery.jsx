@@ -15,7 +15,7 @@ export default function Gallery({ photos, onSelectPhoto, onToggleFavorite, setTa
 
     return (
         <>
-            <Tags />
+            <Tags setTag={setTag} />
             <GalleryContainer>
                 <FluidSection>
                     <Title>
