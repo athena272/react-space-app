@@ -8,9 +8,10 @@ Gallery.propTypes = {
     photos: PropTypes.array,
     onSelectPhoto: PropTypes.func,
     onToggleFavorite: PropTypes.func,
+    setTag: PropTypes.func,
 }
 
-export default function Gallery({ photos, onSelectPhoto, onToggleFavorite }) {
+export default function Gallery({ photos, onSelectPhoto, onToggleFavorite, setTag }) {
 
     return (
         <>
